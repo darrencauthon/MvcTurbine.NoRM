@@ -61,13 +61,51 @@ namespace MvcTurbine.NoRM.Specs.Features
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'\'");
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
 #line 8
 testRunner.And("the \'Account\' collection has not been created");
 #line 9
 testRunner.When("I add an account object to the repository");
 #line 10
 testRunner.Then("there should be 1 object in the \'Account\' collection");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Add an object to the repository to a collection that already exists")]
+        public virtual void AddAnObjectToTheRepositoryToACollectionThatAlreadyExists()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an object to the repository to a collection that already exists", ((string[])(null)));
+#line 12
+this.ScenarioSetup(scenarioInfo);
+#line 13
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line 14
+testRunner.And("the \'Account\' collection exists");
+#line 15
+testRunner.When("I add an account object to the repository");
+#line 16
+testRunner.Then("there should be 1 object in the \'Account\' collection");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Update an object to the repository")]
+        public virtual void UpdateAnObjectToTheRepository()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update an object to the repository", ((string[])(null)));
+#line 18
+this.ScenarioSetup(scenarioInfo);
+#line 19
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line 20
+testRunner.And("an account with id of X exists in the collection");
+#line 21
+testRunner.When("I update the name of the account to \'Changed\'");
+#line 22
+testRunner.Then("the account document with id of X has a name of \'Changed\'");
 #line hidden
             testRunner.CollectScenarioErrors();
         }

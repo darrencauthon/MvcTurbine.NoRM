@@ -1,3 +1,4 @@
+using System;
 using Norm.Collections;
 
 namespace MvcTurbine.NoRM
@@ -14,6 +15,11 @@ namespace MvcTurbine.NoRM
         public void Add(T objectToAdd)
         {
             mongoCollection.Insert(objectToAdd);
+        }
+
+        public void Update(T objectToUpdate)
+        {
+            mongoCollection.Save(objectToUpdate);
         }
     }
 }

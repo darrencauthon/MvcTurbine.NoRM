@@ -12,7 +12,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
     [Binding]
     public class GenericMongoRepositorySteps
     {
-        private const string newAccountId = "new account id";
+        private string Id = "X";
 
         public ScenarioContext context
         {
@@ -55,7 +55,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
             
             var newGuid = Guid.NewGuid();
             
-            context["X"] = newGuid;
+            context[Id] = newGuid;
 
             mongo.GetCollection<Account>().Insert(new Account(){ Id = newGuid});
         }
@@ -76,7 +76,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
             var mongo = context.Get<Mongo>();
             var collection = mongo.GetCollection<Account>();
 
-            var account = new Account{Id = (Guid)context["X"], Name = value };
+            var account = new Account{Id = (Guid)context[Id], Name = value };
 
             var repository = new MongoRepository<Account>(collection);
             repository.Update(account);
@@ -100,7 +100,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
             var mongo = context.Get<Mongo>();
             var collection = mongo.GetCollection<Account>();
 
-            var id = (Guid)context["X"];
+            var id = (Guid)context[Id];
 
             var repository = new MongoRepository<Account>(collection);
             var account = repository.Retrieve().Where(x=>x.Id == id).Single();
@@ -120,7 +120,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
         public void ThenTheAccountDocumentWithIdOfXHasANameOfChanged(string value)
         {
 
-            var id = (Guid)context["X"];
+            var id = (Guid)context[Id];
 
             var mongo = context.Get<Mongo>();
             var account = mongo.GetCollection<Account>().Find().Where(x => x.Id == id).First();
@@ -132,7 +132,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
         [Then(@"the account document with an id of X was returned")]
         public void ThenTheAccountdocumentWithAnIdOfXWasReturned()
         {
-            var id = (Guid)context["X"];
+            var id = (Guid)context[Id];
 
             var accounts = context.Get<IQueryable<Account>>();
 
@@ -142,7 +142,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
         [Then(@"the account document with an id of X no longer exists in the collection")]
         public void ThenTheAccountDocumentWithAnIdOfXNoLongerExistsInTheCollection()
         {
-            var id = (Guid)context["X"];
+            var id = (Guid)context[Id];
 
             var mongo = context.Get<Mongo>();
             var account = mongo.GetCollection<Account>().Find().Where(x => x.Id == id).FirstOrDefault();

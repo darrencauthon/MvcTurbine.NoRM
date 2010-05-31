@@ -31,6 +31,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MvcTurbine">
+      <HintPath>..\..\lib\MvcTurbine\MvcTurbine.dll</HintPath>
+    </Reference>
+    <Reference Include="Norm">
+      <HintPath>..\..\lib\NoRM\Norm.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.4.10098, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Should">
+      <HintPath>..\..\lib\Should\Should.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlowAssist">
+      <HintPath>..\..\lib\SpecFlowAssist\SpecFlowAssist.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,11 +56,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\GenericMongoRepository.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenericMongoRepository.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\GenericMongoRepositorySteps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\" />
-    <Folder Include="Steps\" />
+    <ProjectReference Include="..\MvcTurbine.NoRM\MvcTurbine.NoRM.csproj">
+      <Project>{05DDD5D4-3CDE-4908-93DF-A3427980BD63}</Project>
+      <Name>MvcTurbine.NoRM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\GenericMongoRepository.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GenericMongoRepository.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

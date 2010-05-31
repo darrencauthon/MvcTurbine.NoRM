@@ -109,6 +109,44 @@ testRunner.Then("the account document with id of X has a name of \'Changed\'");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Retrieve an object from the repository")]
+        public virtual void RetrieveAnObjectFromTheRepository()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Retrieve an object from the repository", ((string[])(null)));
+#line 24
+this.ScenarioSetup(scenarioInfo);
+#line 25
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line 26
+testRunner.And("an account with id of X exists in the collection");
+#line 27
+testRunner.When("I retrieve the accounts from the repository");
+#line 28
+testRunner.Then("the account document with an id of X was returned");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Delete an object from the repository")]
+        public virtual void DeleteAnObjectFromTheRepository()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete an object from the repository", ((string[])(null)));
+#line 30
+this.ScenarioSetup(scenarioInfo);
+#line 31
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line 32
+testRunner.And("an account with id of X exists in the collection");
+#line 33
+testRunner.When("I delete the account with X");
+#line 34
+testRunner.Then("the account document with an id of X no longer exists in the collection");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
     }
 }
 #endregion

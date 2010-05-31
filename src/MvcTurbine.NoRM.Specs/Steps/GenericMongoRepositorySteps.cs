@@ -82,6 +82,32 @@ namespace MvcTurbine.NoRM.Specs.Steps
             repository.Update(account);
         }
 
+        [When(@"I retrieve the accounts from the repository")]
+        public void WhenIRetrieveTheAccountsFromTheRepository()
+        {
+            var mongo = context.Get<Mongo>();
+            var collection = mongo.GetCollection<Account>();
+
+            var repository = new MongoRepository<Account>(collection);
+            var accounts = repository.Retrieve();
+
+            context.Set(accounts);
+        }
+
+        [When(@"I delete the account with X")]
+        public void WhenIDeleteTheAccountWithX()
+        {
+            var mongo = context.Get<Mongo>();
+            var collection = mongo.GetCollection<Account>();
+
+            var id = (Guid)context["X"];
+
+            var repository = new MongoRepository<Account>(collection);
+            var account = repository.Retrieve().Where(x=>x.Id == id).Single();
+
+            repository.Delete(account);
+        }
+
         [Then(@"there should be (.*) object in the '(.*)' collection")]
         public void ThenThereShouldBe1ObjectInTheAccountCollection(int objectCount, string collectionName)
         {
@@ -101,6 +127,27 @@ namespace MvcTurbine.NoRM.Specs.Steps
 
             account.Name.ShouldEqual(value);
 
+        }
+
+        [Then(@"the account document with an id of X was returned")]
+        public void ThenTheAccountdocumentWithAnIdOfXWasReturned()
+        {
+            var id = (Guid)context["X"];
+
+            var accounts = context.Get<IQueryable<Account>>();
+
+            accounts.Where(x => x.Id == id).First().ShouldNotBeNull();
+        }
+
+        [Then(@"the account document with an id of X no longer exists in the collection")]
+        public void ThenTheAccountDocumentWithAnIdOfXNoLongerExistsInTheCollection()
+        {
+            var id = (Guid)context["X"];
+
+            var mongo = context.Get<Mongo>();
+            var account = mongo.GetCollection<Account>().Find().Where(x => x.Id == id).FirstOrDefault();
+
+            account.ShouldBeNull();
         }
 
         private class Account

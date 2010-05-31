@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Norm.Collections;
 
 namespace MvcTurbine.NoRM
@@ -20,6 +21,16 @@ namespace MvcTurbine.NoRM
         public void Update(T objectToUpdate)
         {
             mongoCollection.Save(objectToUpdate);
+        }
+
+        public IQueryable<T> Retrieve()
+        {
+            return mongoCollection.Find().AsQueryable();
+        }
+
+        public void Delete(T objectToDelete)
+        {
+            mongoCollection.Delete(objectToDelete);
         }
     }
 }

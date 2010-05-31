@@ -20,3 +20,15 @@ Scenario: Update an object to the repository
 	And an account with id of X exists in the collection
 	When I update the name of the account to 'Changed'
 	Then the account document with id of X has a name of 'Changed'
+
+Scenario: Retrieve an object from the repository
+	Given a mongo db 'TEST' on server 'localhost' on port '27017'
+	And an account with id of X exists in the collection
+	When I retrieve the accounts from the repository
+	Then the account document with an id of X was returned
+
+Scenario: Delete an object from the repository
+	Given a mongo db 'TEST' on server 'localhost' on port '27017'
+	And an account with id of X exists in the collection
+	When I delete the account with X
+	Then the account document with an id of X no longer exists in the collection

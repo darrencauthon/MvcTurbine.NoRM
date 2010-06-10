@@ -31,7 +31,7 @@ namespace MvcTurbine.NoRM.Specs.Features
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Resolve a working mongo repository", "In order to work with mongo data\r\nAs a programmer\r\nI want to be able to resolve a" +
-                    " working mongo repository from the service locator", ((string[])(null)));
+                    " working mongo repository from the many Turbine service locators", ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,33 +63,76 @@ this.ScenarioSetup(scenarioInfo);
 #line 7
 testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
 #line 8
-testRunner.And("I have a service locator");
+testRunner.And("I have a Unity service locator");
 #line 9
-testRunner.When("I resolve a class with a dependency on IMongoRepository<Account>");
+testRunner.And("I have spun the NoRM Blade");
 #line 10
+testRunner.When("I resolve a class with a dependency on IMongoRepository<Account>");
+#line 11
 testRunner.Then("the class should receive an instance of MongoRepository<Account>");
 #line hidden
             testRunner.CollectScenarioErrors();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Resolve a class with two dependencies on IMongoRepository<T>")]
-        public virtual void ResolveAClassWithTwoDependenciesOnIMongoRepositoryT()
+        [NUnit.Framework.DescriptionAttribute("Resolve a class with a dependency on IMongoRepository<T>")]
+        public virtual void ResolveAClassWithADependencyOnIMongoRepositoryT()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resolve a class with two dependencies on IMongoRepository<T>", ((string[])(null)));
-#line 12
-this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resolve a class with a dependency on IMongoRepository<T>", ((string[])(null)));
 #line 13
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+this.ScenarioSetup(scenarioInfo);
 #line 14
-testRunner.And("I have a service locator");
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
 #line 15
-testRunner.When("I resolve a class with a dependency on IMongoRepository<Account> and IMongoReposi" +
-                    "tory<Product>");
+testRunner.And("I have a StructureMap service locator");
 #line 16
-testRunner.Then("the class should receive an instance of MongoRepository<Account>");
+testRunner.And("I have spun the NoRM Blade");
 #line 17
-testRunner.And("the class should receive an instance of MongoRepository<Product>");
+testRunner.When("I resolve a class with a dependency on IMongoRepository<Account>");
+#line 18
+testRunner.Then("the class should receive an instance of MongoRepository<Account>");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Resolve a class with a dependency on IMongoRepository<T>")]
+        public virtual void ResolveAClassWithADependencyOnIMongoRepositoryT()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resolve a class with a dependency on IMongoRepository<T>", ((string[])(null)));
+#line 20
+this.ScenarioSetup(scenarioInfo);
+#line 21
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line 22
+testRunner.And("I have a Ninject service locator");
+#line 23
+testRunner.And("I have spun the NoRM Blade");
+#line 24
+testRunner.When("I resolve a class with a dependency on IMongoRepository<Account>");
+#line 25
+testRunner.Then("the class should receive an instance of MongoRepository<Account>");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Resolve a class with a dependency on IMongoRepository<T>")]
+        public virtual void ResolveAClassWithADependencyOnIMongoRepositoryT()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resolve a class with a dependency on IMongoRepository<T>", ((string[])(null)));
+#line 27
+this.ScenarioSetup(scenarioInfo);
+#line 28
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line 29
+testRunner.And("I have a Windsor service locator");
+#line 30
+testRunner.And("I have spun the NoRM Blade");
+#line 31
+testRunner.When("I resolve a class with a dependency on IMongoRepository<Account>");
+#line 32
+testRunner.Then("the class should receive an instance of MongoRepository<Account>");
 #line hidden
             testRunner.CollectScenarioErrors();
         }

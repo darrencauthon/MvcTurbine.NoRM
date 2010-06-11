@@ -45,50 +45,54 @@ namespace MvcTurbine.NoRM.Specs.Steps
         {
             var mongo = context.Get<Mongo>();
             mongo.Database.DropCollection(collectionName);
-            mongo.Database.CreateCollection(new CreateCollectionOptions{Name = collectionName});
+            mongo.Database.CreateCollection(new CreateCollectionOptions {Name = collectionName});
         }
 
         [Given(@"an account with id of X exists in the collection")]
         public void GivenAnAccountWithIdOfXExistsInTheCollection()
         {
             var mongo = context.Get<Mongo>();
-            
+
             var newGuid = Guid.NewGuid();
-            
+
             context[Id] = newGuid;
 
-            mongo.GetCollection<Account>().Insert(new Account(){ Id = newGuid});
+            mongo.GetCollection<Account>().Insert(new Account {Id = newGuid});
         }
 
         [When(@"I add an account object to the repository")]
         public void WhenIAddAnAccountObjectToTheRepository()
         {
-            var mongo = context.Get<Mongo>();
-            var collection = mongo.GetCollection<Account>();
-
-            var repository = new MongoRepository<Account>(collection);
+            var repository = CreateMongoRepository();
             repository.Add(new Account());
+        }
+
+        private MongoRepository<Account> CreateMongoRepository()
+        {
+            var mongo = context.Get<Mongo>();
+
+            var mongoFactoryFake = context.GetMock<IMongoFactory>();
+            mongoFactoryFake
+                .Setup(x => x.CreateMongo())
+                .Returns(mongo);
+
+            return new MongoRepository<Account>(mongoFactoryFake.Object);
         }
 
         [When(@"I update the name of the account to '(.*)'")]
         public void WhenIUpdateTheNameOfTheAccountToChanged(string value)
         {
-            var mongo = context.Get<Mongo>();
-            var collection = mongo.GetCollection<Account>();
+            var repository = CreateMongoRepository();
 
-            var account = new Account{Id = (Guid)context[Id], Name = value };
-
-            var repository = new MongoRepository<Account>(collection);
+            var account = new Account {Id = (Guid) context[Id], Name = value};
             repository.Update(account);
         }
 
         [When(@"I retrieve the accounts from the repository")]
         public void WhenIRetrieveTheAccountsFromTheRepository()
         {
-            var mongo = context.Get<Mongo>();
-            var collection = mongo.GetCollection<Account>();
+            var repository = CreateMongoRepository();
 
-            var repository = new MongoRepository<Account>(collection);
             var accounts = repository.Retrieve();
 
             context.Set(accounts);
@@ -97,13 +101,10 @@ namespace MvcTurbine.NoRM.Specs.Steps
         [When(@"I delete the account with X")]
         public void WhenIDeleteTheAccountWithX()
         {
-            var mongo = context.Get<Mongo>();
-            var collection = mongo.GetCollection<Account>();
+            var repository = CreateMongoRepository();
 
             var id = (Guid)context[Id];
-
-            var repository = new MongoRepository<Account>(collection);
-            var account = repository.Retrieve().Where(x=>x.Id == id).Single();
+            var account = repository.Retrieve().Where(x => x.Id == id).Single();
 
             repository.Delete(account);
         }
@@ -119,20 +120,18 @@ namespace MvcTurbine.NoRM.Specs.Steps
         [Then(@"the account document with id of X has a name of '(.*)'")]
         public void ThenTheAccountDocumentWithIdOfXHasANameOfChanged(string value)
         {
-
-            var id = (Guid)context[Id];
+            var id = (Guid) context[Id];
 
             var mongo = context.Get<Mongo>();
             var account = mongo.GetCollection<Account>().Find().Where(x => x.Id == id).First();
 
             account.Name.ShouldEqual(value);
-
         }
 
         [Then(@"the account document with an id of X was returned")]
         public void ThenTheAccountdocumentWithAnIdOfXWasReturned()
         {
-            var id = (Guid)context[Id];
+            var id = (Guid) context[Id];
 
             var accounts = context.Get<IQueryable<Account>>();
 
@@ -142,7 +141,7 @@ namespace MvcTurbine.NoRM.Specs.Steps
         [Then(@"the account document with an id of X no longer exists in the collection")]
         public void ThenTheAccountDocumentWithAnIdOfXNoLongerExistsInTheCollection()
         {
-            var id = (Guid)context[Id];
+            var id = (Guid) context[Id];
 
             var mongo = context.Get<Mongo>();
             var account = mongo.GetCollection<Account>().Find().Where(x => x.Id == id).FirstOrDefault();

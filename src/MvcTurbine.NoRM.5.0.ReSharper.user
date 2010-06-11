@@ -7,8 +7,51 @@
     </boolean>
   </SettingsComponent>
   <RecentFiles>
-    <RecentFiles />
-    <RecentEdits />
+    <RecentFiles>
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="279" fromTop="10" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:IMongoRepository.cs" caret="108" fromTop="2" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature.cs" caret="2522" fromTop="15" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature" caret="133" fromTop="2" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:IMongoRepositoryFactory.cs" caret="124" fromTop="3" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepositoryFactory.cs" caret="204" fromTop="6" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="1800" fromTop="18" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="0" fromTop="0" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="1010" fromTop="39" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:IMongoFactory.cs" caret="285" fromTop="12" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="3486" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="681" fromTop="14" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="2049" fromTop="26" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="132" fromTop="4" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="15" fromTop="0" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature" caret="590" fromTop="10" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="977" fromTop="14" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="2207" fromTop="31" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="1363" fromTop="25" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="661" fromTop="17" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="279" fromTop="10" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="2155" fromTop="22" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="2155" fromTop="17" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:IMongoRepositoryFactory.cs" caret="124" fromTop="3" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepositoryFactory.cs" caret="95" fromTop="3" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepositoryFactory.cs" caret="194" fromTop="5" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="1686" fromTop="17" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="129" fromTop="5" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="984" fromTop="15" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:IMongoFactory.cs" caret="299" fromTop="12" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="193" fromTop="8" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="342" fromTop="13" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="1002" fromTop="8" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:IMongoFactory.cs" caret="156" fromTop="8" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="2335" fromTop="16" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="2127" fromTop="9" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="2277" fromTop="14" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="2613" fromTop="24" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="2968" fromTop="15" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="3164" fromTop="22" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="3486" fromTop="22" />
+    </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
     <NAntPath value="" />
@@ -20,4 +63,91 @@
     <NUnitInstallDir>C:\Program Files\NUnit 2.5.4\bin\net-2.0\</NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="2" />
+      <Item value="ScenarioContext`0" priority="1" />
+      <Item value="return" priority="2" />
+      <Item value="context" priority="12" />
+      <Item value="new" priority="4" />
+      <Item value="var" priority="9" />
+      <Item value="normBlade" priority="1" />
+      <Item value="MockerExtensionMethods`0" priority="3" />
+      <Item value="IRotorContext`0" priority="1" />
+      <Item value="rotorContext" priority="0" />
+      <Item value="x" priority="2" />
+      <Item value="IServiceLocator`0" priority="0" />
+      <Item value="serviceLocator" priority="0" />
+      <Item value="repository" priority="2" />
+      <Item value="WhenIResolveAClassWithADependencyOnIMongoRepositoryAccount`0" priority="0" />
+      <Item value="IMongoRepository" priority="3" />
+      <Item value="MongoRepository" priority="4" />
+      <Item value="as" priority="0" />
+      <Item value="unityServiceLocator" priority="0" />
+      <Item value="unityContainer" priority="2" />
+      <Item value="UnityServiceLocator`0" priority="0" />
+      <Item value="Unity" priority="0" />
+      <Item value="typeof" priority="4" />
+      <Item value="IMongoRepositoryFactory`0" priority="1" />
+      <Item value="factory" priority="1" />
+      <Item value="using" priority="0" />
+      <Item value="Account`0" priority="0" />
+      <Item value="null" priority="0" />
+      <Item value="if" priority="1" />
+      <Item value="repo" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="mongoCollection" priority="1" />
+      <Item value="class" priority="1" />
+      <Item value="IMongoFactory`0" priority="1" />
+      <Item value="mongoFactory" priority="0" />
+      <Item value="TypeExtensions`0" priority="0" />
+      <Item value="Mongo" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="private" priority="1" />
+      <Item value="readonly" priority="0" />
+      <Item value="T`0" priority="0" />
+      <Item value="Mongo`0" priority="0" />
+      <Item value="mongo" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TechTalk.SpecFlow.ScenarioContext">
+      <Item value="Current" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcTurbine.NoRM.NoRMBlade">
+      <Item value="Spin`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Mock`1">
+      <Item value="Setup`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcTurbine.IRotorContext">
+      <Item value="ServiceLocator" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Language.Flow.ISetup`2">
+      <Item value="Returns`4" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TechTalk.SpecFlow.ScenarioContext">
+      <Item value="Get`1" priority="2" />
+      <Item value="Set`1" priority="2" />
+      <Item value="GetMock`1" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcTurbine.ComponentModel.IServiceLocator">
+      <Item value="Resolve`0" priority="0" />
+      <Item value="Register`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Practices.Unity.IUnityContainer">
+      <Item value="RegisterType`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcTurbine.NoRM.IMongoRepository`1">
+      <Item value="GetType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Norm.Mongo">
+      <Item value="GetCollection`1" priority="0" />
+      <Item value="Dispose`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MvcTurbine.NoRM.IMongoFactory">
+      <Item value="CreateMongo`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

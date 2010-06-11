@@ -1,16 +1,18 @@
-using System;
 using System.Linq;
+using Norm;
 using Norm.Collections;
 
 namespace MvcTurbine.NoRM
 {
-    public class MongoRepository<T>
+    public class MongoRepository<T> : IMongoRepository<T>
     {
+        private readonly Mongo mongo;
         private readonly MongoCollection<T> mongoCollection;
 
-        public MongoRepository(MongoCollection<T> mongoCollection)
+        public MongoRepository(IMongoFactory mongoFactory)
         {
-            this.mongoCollection = mongoCollection;
+            mongo = mongoFactory.CreateMongo();
+            mongoCollection = mongo.GetCollection<T>();
         }
 
         public void Add(T objectToAdd)
@@ -31,6 +33,11 @@ namespace MvcTurbine.NoRM
         public void Delete(T objectToDelete)
         {
             mongoCollection.Delete(objectToDelete);
+        }
+
+        public void Dispose()
+        {
+            mongo.Dispose();
         }
     }
 }

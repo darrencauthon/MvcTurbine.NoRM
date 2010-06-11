@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\lib\MvcTurbine\Unity\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\lib\MvcTurbine\Unity\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
     <Reference Include="MvcTurbine">
       <HintPath>..\..\lib\MvcTurbine\MvcTurbine.dll</HintPath>
+    </Reference>
+    <Reference Include="MvcTurbine.Unity">
+      <HintPath>..\..\lib\MvcTurbine\Unity\MvcTurbine.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Norm">
       <HintPath>..\..\lib\NoRM\Norm.dll</HintPath>
@@ -46,7 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMongoFactory.cs" />
+    <Compile Include="IMongoRepository.cs" />
+    <Compile Include="IMongoRepositoryFactory.cs" />
     <Compile Include="MongoRepository.cs" />
+    <Compile Include="MongoRepositoryFactory.cs" />
+    <Compile Include="NoRMBlade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.NoRM", "MvcTurbi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.NoRM.Specs", "MvcTurbine.NoRM.Specs\MvcTurbine.NoRM.Specs.csproj", "{C2011B4A-AE0E-426C-93C7-3952B79B00B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcTurbine.NoRM.Unity", "MvcTurbine.NoRM.Unity\MvcTurbine.NoRM.Unity.csproj", "{245B45C1-747C-4687-BE02-B097BE472B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvcturbine.NorM.Unity.Tests", "Mvcturbine.NorM.Unity.Tests\Mvcturbine.NorM.Unity.Tests.csproj", "{A43A2C40-8954-4B13-80D7-EEE50C643C1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{C2011B4A-AE0E-426C-93C7-3952B79B00B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2011B4A-AE0E-426C-93C7-3952B79B00B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2011B4A-AE0E-426C-93C7-3952B79B00B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245B45C1-747C-4687-BE02-B097BE472B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245B45C1-747C-4687-BE02-B097BE472B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245B45C1-747C-4687-BE02-B097BE472B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245B45C1-747C-4687-BE02-B097BE472B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43A2C40-8954-4B13-80D7-EEE50C643C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43A2C40-8954-4B13-80D7-EEE50C643C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43A2C40-8954-4B13-80D7-EEE50C643C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43A2C40-8954-4B13-80D7-EEE50C643C1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

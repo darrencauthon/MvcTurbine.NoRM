@@ -80,6 +80,10 @@
     <Compile Include="Steps\ResolveAWorkingMongoRepositorySteps.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MvcTurbine.NoRM.Unity\MvcTurbine.NoRM.Unity.csproj">
+      <Project>{245B45C1-747C-4687-BE02-B097BE472B2B}</Project>
+      <Name>MvcTurbine.NoRM.Unity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvcTurbine.NoRM\MvcTurbine.NoRM.csproj">
       <Project>{05DDD5D4-3CDE-4908-93DF-A3427980BD63}</Project>
       <Name>MvcTurbine.NoRM</Name>

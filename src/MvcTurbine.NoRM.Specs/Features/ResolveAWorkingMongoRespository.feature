@@ -6,6 +6,8 @@
 Scenario: Resolve a class with a dependency on IMongoRepository<T> with Unity service locator
 	Given a mongo db 'TEST' on server 'localhost' on port '27017'
 	And I have a Unity service locator
+	And I am referencing MvcTurbine.NoRM.Unity
+	And the NoRM registration has been completed
 	And I have spun the NoRM Blade
 	When I resolve a class with a dependency on IMongoRepositoryFactory
 	And I get a IMongoRepository<Account> class out of the factory

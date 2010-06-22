@@ -67,12 +67,16 @@ testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'"
 #line 8
 testRunner.And("I have a Unity service locator");
 #line 9
-testRunner.And("I have spun the NoRM Blade");
+testRunner.And("I am referencing MvcTurbine.NoRM.Unity");
 #line 10
-testRunner.When("I resolve a class with a dependency on IMongoRepositoryFactory");
+testRunner.And("the NoRM registration has been completed");
 #line 11
-testRunner.And("I get a IMongoRepository<Account> class out of the factory");
+testRunner.And("I have spun the NoRM Blade");
 #line 12
+testRunner.When("I resolve a class with a dependency on IMongoRepositoryFactory");
+#line 13
+testRunner.And("I get a IMongoRepository<Account> class out of the factory");
+#line 14
 testRunner.Then("I should have received an instance of MongoRepository<Account>");
 #line hidden
             testRunner.CollectScenarioErrors();

@@ -9,11 +9,15 @@
   <RecentFiles>
     <RecentFiles>
       <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="3355" fromTop="36" />
-      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="0" fromTop="0" />
-      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature.cs" caret="2052" fromTop="2" />
       <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="1693" fromTop="10" />
-      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature" caret="533" fromTop="9" />
-      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="445" fromTop="14" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature.cs" caret="591" fromTop="9" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="985" fromTop="20" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:ResolveAWorkingMongoRespository.feature" caret="631" fromTop="11" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepositoryFactory.cs" caret="0" fromTop="0" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="0" fromTop="0" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoFactory.cs" caret="0" fromTop="0" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="456" fromTop="11" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:ISetupNoRMRepositories.cs" caret="215" fromTop="8" />
     </RecentFiles>
     <RecentEdits>
       <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="2099" fromTop="16" />
@@ -28,8 +32,19 @@
       <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:GenericMongoRepositorySteps.cs" caret="3355" fromTop="3" />
       <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="1667" fromTop="16" />
       <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Steps/f:ResolveAWorkingMongoRepositorySteps.cs" caret="2133" fromTop="20" />
-      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="972" fromTop="17" />
-      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="736" fromTop="7" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="1208" fromTop="17" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="984" fromTop="22" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="301" fromTop="7" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="306" fromTop="8" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="551" fromTop="13" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="748" fromTop="18" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="975" fromTop="20" />
+      <File id="C2011B4A-AE0E-426C-93C7-3952B79B00B1/d:Features/f:GenericMongoRepository.feature" caret="1190" fromTop="25" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="103" fromTop="6" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepository.cs" caret="202" fromTop="6" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:MongoRepositoryFactory.cs" caret="139" fromTop="5" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:NoRMBlade.cs" caret="465" fromTop="11" />
+      <File id="05DDD5D4-3CDE-4908-93DF-A3427980BD63/f:ISetupNoRMRepositories.cs" caret="205" fromTop="6" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -84,11 +99,13 @@
       <Item value="string" priority="0" />
       <Item value="private" priority="1" />
       <Item value="readonly" priority="0" />
-      <Item value="T`0" priority="0" />
+      <Item value="T`0" priority="1" />
       <Item value="Mongo`0" priority="0" />
       <Item value="mongo" priority="1" />
       <Item value="MongoRepository&lt;T&gt;" priority="0" />
       <Item value="MongoRepositoryFactory`0" priority="0" />
+      <Item value="IQueryable`0" priority="1" />
+      <Item value="void" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@TechTalk.SpecFlow.ScenarioContext">
       <Item value="Current" priority="0" />

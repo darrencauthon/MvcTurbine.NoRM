@@ -1,5 +1,10 @@
 ﻿namespace MvcTurbine.NoRM
 {
+    public interface IMongoRepositoryFactory
+    {
+        IMongoRepository<T> GetRepository<T>();
+    }
+
     public class MongoRepositoryFactory : IMongoRepositoryFactory
     {
         private readonly IMongoFactory mongoFactory;

@@ -55,9 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMongoFactory.cs" />
-    <Compile Include="IMongoRepository.cs" />
-    <Compile Include="IMongoRepositoryFactory.cs" />
+    <Compile Include="MongoFactory.cs" />
     <Compile Include="MongoRepository.cs" />
     <Compile Include="MongoRepositoryFactory.cs" />
     <Compile Include="NoRMBlade.cs" />

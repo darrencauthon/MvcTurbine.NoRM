@@ -1,9 +1,18 @@
+using System;
 using System.Linq;
 using Norm;
 using Norm.Collections;
 
 namespace MvcTurbine.NoRM
 {
+    public interface IMongoRepository<T> : IDisposable
+    {
+        void Add(T objectToAdd);
+        void Update(T objectToUpdate);
+        IQueryable<T> Retrieve();
+        void Delete(T objectToDelete);
+    }
+
     public class MongoRepository<T> : IMongoRepository<T>
     {
         private readonly Mongo mongo;

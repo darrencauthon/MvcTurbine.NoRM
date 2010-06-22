@@ -45,6 +45,7 @@ namespace MvcTurbine.NoRM.Specs.Features
         public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioStart(scenarioInfo);
+            this.FeatureBackground();
         }
         
         [NUnit.Framework.TearDownAttribute()]
@@ -53,20 +54,26 @@ namespace MvcTurbine.NoRM.Specs.Features
             testRunner.OnScenarioEnd();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 6
+#line 7
+testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add an object to the repository to a collection that does not exist")]
         public virtual void AddAnObjectToTheRepositoryToACollectionThatDoesNotExist()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an object to the repository to a collection that does not exist", ((string[])(null)));
-#line 6
-this.ScenarioSetup(scenarioInfo);
-#line 7
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
-#line 8
-testRunner.And("the \'Account\' collection has not been created");
 #line 9
-testRunner.When("I add an account object to the repository");
+this.ScenarioSetup(scenarioInfo);
 #line 10
+testRunner.Given("the \'Account\' collection has not been created");
+#line 11
+testRunner.When("I add an account object to the repository");
+#line 12
 testRunner.Then("there should be 1 object in the \'Account\' collection");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -77,15 +84,13 @@ testRunner.Then("there should be 1 object in the \'Account\' collection");
         public virtual void AddAnObjectToTheRepositoryToACollectionThatAlreadyExists()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add an object to the repository to a collection that already exists", ((string[])(null)));
-#line 12
-this.ScenarioSetup(scenarioInfo);
-#line 13
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
 #line 14
-testRunner.And("the \'Account\' collection exists");
+this.ScenarioSetup(scenarioInfo);
 #line 15
-testRunner.When("I add an account object to the repository");
+testRunner.Given("the \'Account\' collection exists");
 #line 16
+testRunner.When("I add an account object to the repository");
+#line 17
 testRunner.Then("there should be 1 object in the \'Account\' collection");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -96,12 +101,10 @@ testRunner.Then("there should be 1 object in the \'Account\' collection");
         public virtual void UpdateAnObjectToTheRepository()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update an object to the repository", ((string[])(null)));
-#line 18
-this.ScenarioSetup(scenarioInfo);
 #line 19
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+this.ScenarioSetup(scenarioInfo);
 #line 20
-testRunner.And("an account with id of X exists in the collection");
+testRunner.Given("an account with id of X exists in the collection");
 #line 21
 testRunner.When("I update the name of the account to \'Changed\'");
 #line 22
@@ -118,12 +121,10 @@ testRunner.Then("the account document with id of X has a name of \'Changed\'");
 #line 24
 this.ScenarioSetup(scenarioInfo);
 #line 25
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
+testRunner.Given("an account with id of X exists in the collection");
 #line 26
-testRunner.And("an account with id of X exists in the collection");
-#line 27
 testRunner.When("I retrieve the accounts from the repository");
-#line 28
+#line 27
 testRunner.Then("the account document with an id of X was returned");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -134,15 +135,13 @@ testRunner.Then("the account document with an id of X was returned");
         public virtual void DeleteAnObjectFromTheRepository()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete an object from the repository", ((string[])(null)));
-#line 30
+#line 29
 this.ScenarioSetup(scenarioInfo);
+#line 30
+testRunner.Given("an account with id of X exists in the collection");
 #line 31
-testRunner.Given("a mongo db \'TEST\' on server \'localhost\' on port \'27017\'");
-#line 32
-testRunner.And("an account with id of X exists in the collection");
-#line 33
 testRunner.When("I delete the account with X");
-#line 34
+#line 32
 testRunner.Then("the account document with an id of X no longer exists in the collection");
 #line hidden
             testRunner.CollectScenarioErrors();

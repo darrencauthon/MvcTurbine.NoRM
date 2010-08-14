@@ -51,6 +51,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcTurbine.NoRM\MvcTurbine.NoRM.csproj">
+      <Project>{05DDD5D4-3CDE-4908-93DF-A3427980BD63}</Project>
+      <Name>MvcTurbine.NoRM</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

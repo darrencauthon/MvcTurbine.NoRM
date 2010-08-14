@@ -15,7 +15,10 @@ namespace MvcTurbine.NoRM.HttpHandlers
         public void Init(HttpApplication context)
         {
             context.BeginRequest +=
-                (sender, e) => { HttpContext.Current.Items["MongoFactory"] = serviceLocator.Resolve<IMongoRepositoryFactory>(); };
+                (sender, e) =>
+                    {
+                        HttpContext.Current.Items["MongoFactory"] = serviceLocator.Resolve<IMongoRepositoryFactory>();
+                    };
 
             context.EndRequest +=
                 (sender, e) =>

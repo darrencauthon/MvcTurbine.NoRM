@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Db\DefaultMongoConnectionSettingsRetriever.cs" />
+    <Compile Include="Db\IDefaultServerNameCalculator.cs" />
     <Compile Include="HttpHandlers\SessionHttpHandler.cs" />
     <Compile Include="Mongo\IMongoConnectionSettingsRetriever.cs" />
     <Compile Include="Mongo\MongoCollectionBuilder.cs" />

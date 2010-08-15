@@ -1,6 +1,6 @@
 ﻿using Norm.Collections;
 
-namespace MvcTurbine.NoRM.Mongo
+namespace MvcTurbine.NoRM.Db
 {
     public interface IMongoCollectionBuilder
     {

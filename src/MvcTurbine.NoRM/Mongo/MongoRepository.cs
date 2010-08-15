@@ -3,7 +3,7 @@ using System.Linq;
 using Norm;
 using Norm.Collections;
 
-namespace MvcTurbine.NoRM.Mongo
+namespace MvcTurbine.NoRM.Db
 {
     public interface IMongoRepository : IDisposable
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMoq;
 using Moq;
-using MvcTurbine.NoRM.Mongo;
+using MvcTurbine.NoRM.Db;
 using Norm;
 using Norm.Collections;
 using NUnit.Framework;

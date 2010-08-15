@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MvcTurbine.NoRM.Mongo
+namespace MvcTurbine.NoRM.Db
 {
     public interface IMongoRepositoryFactory : IDisposable
     {

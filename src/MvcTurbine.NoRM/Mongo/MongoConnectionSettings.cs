@@ -1,4 +1,4 @@
-﻿namespace MvcTurbine.NoRM.Mongo
+﻿namespace MvcTurbine.NoRM.Db
 {
     public class MongoConnectionSettings
     {

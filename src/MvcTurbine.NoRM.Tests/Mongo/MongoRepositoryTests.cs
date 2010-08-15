@@ -2,7 +2,7 @@
 using System.Linq;
 using AutoMoq;
 using Moq;
-using MvcTurbine.NoRM.Mongo;
+using MvcTurbine.NoRM.Db;
 using Norm.Collections;
 using NUnit.Framework;
 using Should;

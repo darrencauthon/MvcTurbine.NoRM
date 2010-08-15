@@ -1,5 +1,5 @@
 ﻿using AutoMoq;
-using MvcTurbine.NoRM.Mongo;
+using MvcTurbine.NoRM.Db;
 using NUnit.Framework;
 using Should;
 

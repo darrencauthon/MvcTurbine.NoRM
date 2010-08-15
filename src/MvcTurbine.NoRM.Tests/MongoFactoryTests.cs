@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AutoMoq;
+﻿using AutoMoq;
 using NUnit.Framework;
+using Should;
 
 namespace MvcTurbine.NoRM.Tests
 {
@@ -21,11 +18,21 @@ namespace MvcTurbine.NoRM.Tests
         [Test]
         public void CreateMongo_returns_a_new_Mongo()
         {
-            var mongoFactory = mocker.Resolve<MongoFactory>();
-        }
-    }
+            mocker.GetMock<IMongoConnectionSettingsRetriever>()
+                .Setup(x => x.GetSettings())
+                .Returns(new MongoConnectionSettings
+                             {
+                                 DatabaseName = "x",
+                                 Server = "localhost",
+                                 Port = "27017"
+                             });
 
-    public class MongoFactory
-    {
+            var factory = mocker.Resolve<MongoFactory>();
+            var result = factory.CreateMongo();
+
+            result.ShouldNotBeNull();
+
+            result.Database.DatabaseName.ShouldEqual("x");
+        }
     }
 }

@@ -53,8 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HttpHandlers\SessionHttpHandler.cs" />
-    <Compile Include="IMongoFactory.cs" />
+    <Compile Include="IMongoConnectionSettingsRetriever.cs" />
     <Compile Include="MongoCollectionBuilder.cs" />
+    <Compile Include="MongoConnectionSettings.cs" />
+    <Compile Include="MongoFactory.cs" />
     <Compile Include="MongoRepository.cs" />
     <Compile Include="MongoRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

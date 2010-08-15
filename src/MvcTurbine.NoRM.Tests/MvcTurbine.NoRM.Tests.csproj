@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MongoCollectionBuilderTests.cs" />
+    <Compile Include="MongoFactoryTests.cs" />
     <Compile Include="MongoRepositoryFactoryTests.cs" />
     <Compile Include="MongoRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

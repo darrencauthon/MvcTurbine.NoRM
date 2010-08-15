@@ -1,5 +1,4 @@
-﻿using Norm;
-using Norm.Collections;
+﻿using Norm.Collections;
 
 namespace MvcTurbine.NoRM
 {
@@ -10,16 +9,16 @@ namespace MvcTurbine.NoRM
 
     public class MongoCollectionBuilder : IMongoCollectionBuilder
     {
-        private readonly IMongo mongo;
+        private readonly IMongoFactory mongoFactory;
 
-        public MongoCollectionBuilder(IMongo mongo)
+        public MongoCollectionBuilder(IMongoFactory mongoFactory)
         {
-            this.mongo = mongo;
+            this.mongoFactory = mongoFactory;
         }
 
         public IMongoCollection<T> GetCollection<T>()
         {
-            return mongo.GetCollection<T>();
+            return mongoFactory.CreateMongo().GetCollection<T>();
         }
     }
 }

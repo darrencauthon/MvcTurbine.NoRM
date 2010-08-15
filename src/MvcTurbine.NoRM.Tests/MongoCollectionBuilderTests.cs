@@ -16,6 +16,11 @@ namespace MvcTurbine.NoRM.Tests
         public void Setup()
         {
             mocker = new AutoMoqer();
+
+            mocker.GetMock<IMongoFactory>()
+                .Setup(x => x.CreateMongo())
+                .Returns(mocker.GetMock<IMongo>().Object);
+
         }
 
         [Test]

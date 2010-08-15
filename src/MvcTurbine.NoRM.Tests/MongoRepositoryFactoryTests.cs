@@ -1,5 +1,6 @@
 ﻿using AutoMoq;
 using NUnit.Framework;
+using Should;
 
 namespace MvcTurbine.NoRM.Tests
 {
@@ -15,9 +16,13 @@ namespace MvcTurbine.NoRM.Tests
         }
 
         [Test]
-        public void GetRepository_returns_a_repository_of_type_T()
+        public void GetRepository_returns_a_repository()
         {
-            Assert.Fail("START HERE");
+            var factory = mocker.Resolve<MongoRepositoryFactory>();
+            var repository = factory.GetRepository();
+
+            repository.ShouldNotBeNull();
+            repository.ShouldBeType(typeof (MongoRepository));
         }
     }
 }

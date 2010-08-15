@@ -11,5 +11,10 @@ namespace MvcTurbine.NoRM
         public void Dispose()
         {
         }
+
+        public IMongoRepository GetRepository()
+        {
+            return new MongoRepository();
+        }
     }
 }

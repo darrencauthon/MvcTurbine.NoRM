@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HttpHandlers\SessionHttpHandler.cs" />
+    <Compile Include="IMongoRepository.cs" />
+    <Compile Include="MongoRepository.cs" />
     <Compile Include="MongoRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\DefaultRegistration.cs" />

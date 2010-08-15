@@ -15,16 +15,17 @@ namespace MvcTurbine.NoRM
 
     public class MongoRepository : IMongoRepository
     {
+        private readonly IMongoCollectionBuilder mongoCollectionBuilder;
         private readonly Mongo mongo;
+
+        public MongoRepository(IMongoCollectionBuilder mongoCollectionBuilder)
+        {
+            this.mongoCollectionBuilder = mongoCollectionBuilder;
+        }
 
         public void Add<T>(T objectToAdd)
         {
             GetTheCollection<T>().Insert(objectToAdd);
-        }
-
-        private IMongoCollection<T> GetTheCollection<T>()
-        {
-            return mongo.GetCollection<T>();
         }
 
         public void Update<T>(T objectToUpdate)
@@ -32,9 +33,14 @@ namespace MvcTurbine.NoRM
             GetTheCollection<T>().Save(objectToUpdate);
         }
 
+        private IMongoCollection<T> GetTheCollection<T>()
+        {
+            return mongoCollectionBuilder.GetCollection<T>();
+        }
+
         public IQueryable<T> Retrieve<T>()
         {
-            return GetTheCollection<T>().Find().AsQueryable();
+            return GetTheCollection<T>().AsQueryable();
         }
 
         public void Delete<T>(T objectToDelete)

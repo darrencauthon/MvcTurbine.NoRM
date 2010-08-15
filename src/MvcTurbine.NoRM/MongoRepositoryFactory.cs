@@ -14,7 +14,7 @@ namespace MvcTurbine.NoRM
 
         public IMongoRepository GetRepository()
         {
-            return new MongoRepository();
+            return new MongoRepository(null);
         }
     }
 }

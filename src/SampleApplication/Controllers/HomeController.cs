@@ -1,13 +1,40 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Linq;
+using System.Web.Mvc;
+using MvcTurbine.NoRM;
 
 namespace SampleApplication.Controllers
 {
+    public class WebsiteVisit
+    {
+
+        public WebsiteVisit()
+        {
+            Id = Guid.NewGuid();
+        }
+
+        public Guid Id { get; set; }
+    }
+
     [HandleError]
     public class HomeController : Controller
     {
+        private readonly IMongoRepository mongoRepository;
+
+        public HomeController(IMongoRepository mongoRepository)
+        {
+            this.mongoRepository = mongoRepository;
+        }
+
         public ActionResult Index()
         {
-            ViewData["Message"] = "Welcome to ASP.NET MVC!";
+            mongoRepository.Add(new WebsiteVisit());
+
+            var hits = mongoRepository.Retrieve<WebsiteVisit>().Count();
+
+            var testMessage = "Hits: {0}";
+
+            ViewData["Message"] = string.Format(testMessage, hits);
 
             return View();
         }

@@ -53,12 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HttpHandlers\SessionHttpHandler.cs" />
-    <Compile Include="IMongoConnectionSettingsRetriever.cs" />
-    <Compile Include="MongoCollectionBuilder.cs" />
-    <Compile Include="MongoConnectionSettings.cs" />
-    <Compile Include="MongoFactory.cs" />
-    <Compile Include="MongoRepository.cs" />
-    <Compile Include="MongoRepositoryFactory.cs" />
+    <Compile Include="Mongo\IMongoConnectionSettingsRetriever.cs" />
+    <Compile Include="Mongo\MongoCollectionBuilder.cs" />
+    <Compile Include="Mongo\MongoConnectionSettings.cs" />
+    <Compile Include="Mongo\MongoFactory.cs" />
+    <Compile Include="Mongo\MongoRepository.cs" />
+    <Compile Include="Mongo\MongoRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration\DefaultRegistration.cs" />
   </ItemGroup>

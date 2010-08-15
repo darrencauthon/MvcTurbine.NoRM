@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using MvcTurbine.NoRM;
+using MvcTurbine.NoRM.Mongo;
 
 namespace SampleApplication.Controllers
 {

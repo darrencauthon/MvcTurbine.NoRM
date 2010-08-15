@@ -1,11 +1,12 @@
 ﻿using AutoMoq;
 using Moq;
+using MvcTurbine.NoRM.Mongo;
 using Norm;
 using Norm.Collections;
 using NUnit.Framework;
 using Should;
 
-namespace MvcTurbine.NoRM.Tests
+namespace MvcTurbine.NoRM.Tests.Mongo
 {
     [TestFixture]
     public class MongoCollectionBuilderTests
@@ -20,7 +21,6 @@ namespace MvcTurbine.NoRM.Tests
             mocker.GetMock<IMongoFactory>()
                 .Setup(x => x.CreateMongo())
                 .Returns(mocker.GetMock<IMongo>().Object);
-
         }
 
         [Test]

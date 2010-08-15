@@ -2,11 +2,12 @@
 using System.Linq;
 using AutoMoq;
 using Moq;
+using MvcTurbine.NoRM.Mongo;
 using Norm.Collections;
 using NUnit.Framework;
 using Should;
 
-namespace MvcTurbine.NoRM.Tests
+namespace MvcTurbine.NoRM.Tests.Mongo
 {
     [TestFixture]
     public class MongoRepositoryTests

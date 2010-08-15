@@ -1,4 +1,4 @@
-﻿namespace MvcTurbine.NoRM
+﻿namespace MvcTurbine.NoRM.Mongo
 {
     public interface IMongoConnectionSettingsRetriever
     {

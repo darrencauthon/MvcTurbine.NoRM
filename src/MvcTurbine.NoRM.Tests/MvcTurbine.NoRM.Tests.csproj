@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MongoCollectionBuilderTests.cs" />
-    <Compile Include="MongoFactoryTests.cs" />
-    <Compile Include="MongoRepositoryFactoryTests.cs" />
-    <Compile Include="MongoRepositoryTests.cs" />
+    <Compile Include="Mongo\MongoCollectionBuilderTests.cs" />
+    <Compile Include="Mongo\MongoFactoryTests.cs" />
+    <Compile Include="Mongo\MongoRepositoryFactoryTests.cs" />
+    <Compile Include="Mongo\MongoRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

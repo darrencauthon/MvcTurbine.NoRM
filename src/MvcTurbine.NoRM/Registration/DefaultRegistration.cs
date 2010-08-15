@@ -1,4 +1,5 @@
 ﻿using MvcTurbine.ComponentModel;
+using MvcTurbine.NoRM.Mongo;
 
 namespace MvcTurbine.NoRM.Registration
 {

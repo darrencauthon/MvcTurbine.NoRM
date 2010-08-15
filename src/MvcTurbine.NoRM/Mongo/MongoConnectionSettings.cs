@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MvcTurbine.NoRM
+﻿namespace MvcTurbine.NoRM.Mongo
 {
     public class MongoConnectionSettings
     {

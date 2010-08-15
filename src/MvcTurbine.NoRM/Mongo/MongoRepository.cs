@@ -3,7 +3,7 @@ using System.Linq;
 using Norm;
 using Norm.Collections;
 
-namespace MvcTurbine.NoRM
+namespace MvcTurbine.NoRM.Mongo
 {
     public interface IMongoRepository : IDisposable
     {
@@ -16,7 +16,7 @@ namespace MvcTurbine.NoRM
     public class MongoRepository : IMongoRepository
     {
         private readonly IMongoCollectionBuilder mongoCollectionBuilder;
-        private readonly Mongo mongo;
+        private readonly Norm.Mongo mongo;
 
         public MongoRepository(IMongoCollectionBuilder mongoCollectionBuilder)
         {

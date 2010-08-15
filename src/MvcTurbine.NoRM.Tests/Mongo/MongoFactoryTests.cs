@@ -1,8 +1,9 @@
 ﻿using AutoMoq;
+using MvcTurbine.NoRM.Mongo;
 using NUnit.Framework;
 using Should;
 
-namespace MvcTurbine.NoRM.Tests
+namespace MvcTurbine.NoRM.Tests.Mongo
 {
     [TestFixture]
     public class MongoFactoryTests

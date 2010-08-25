@@ -12,6 +12,8 @@ namespace MvcTurbine.NoRM.Registration
             locator.Register<IMongoFactory, MongoFactory>();
             locator.Register<IMongoCollectionBuilder, MongoCollectionBuilder>();
             locator.Register<IMongoConnectionSettingsRetriever, DefaultMongoConnectionSettingsRetriever>();
+            locator.Register<IDefaultServerNameCalculator, DefaultServerNameCalculator>();
+            locator.Register<ICurrentAssemblyNameRetriever, CurrentAssemblyNameRetriever>();
         }
     }
 }

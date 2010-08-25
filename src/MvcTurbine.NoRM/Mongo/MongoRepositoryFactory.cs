@@ -12,9 +12,9 @@ namespace MvcTurbine.NoRM.Db
         {
         }
 
-        public IMongoRepository GetRepository()
+        public IRepository GetRepository()
         {
-            return new MongoRepository(null);
+            return new Repository(null);
         }
     }
 }

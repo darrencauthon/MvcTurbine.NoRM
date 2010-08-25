@@ -56,6 +56,7 @@
     <Compile Include="Db\IDefaultServerNameCalculator.cs" />
     <Compile Include="HttpHandlers\SessionHttpHandler.cs" />
     <Compile Include="Mongo\IMongoConnectionSettingsRetriever.cs" />
+    <Compile Include="Mongo\IRepository.cs" />
     <Compile Include="Mongo\MongoCollectionBuilder.cs" />
     <Compile Include="Mongo\MongoConnectionSettings.cs" />
     <Compile Include="Mongo\MongoFactory.cs" />

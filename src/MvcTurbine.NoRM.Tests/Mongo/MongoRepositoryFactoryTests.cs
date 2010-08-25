@@ -23,7 +23,7 @@ namespace MvcTurbine.NoRM.Tests.Mongo
             var repository = factory.GetRepository();
 
             repository.ShouldNotBeNull();
-            repository.ShouldBeType(typeof (MongoRepository));
+            repository.ShouldBeType(typeof (Repository));
         }
     }
 }

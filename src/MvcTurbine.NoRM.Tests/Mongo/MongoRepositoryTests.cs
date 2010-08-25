@@ -33,7 +33,7 @@ namespace MvcTurbine.NoRM.Tests.Mongo
                 .Setup(x => x.GetCollection<Sample>())
                 .Returns(CreateMongoCollectionThatReturnsThisQueryable(expected));
 
-            var repository = mocker.Resolve<MongoRepository>();
+            var repository = mocker.Resolve<Repository>();
             var result = repository.Retrieve<Sample>();
 
             result.ShouldBeSameAs(expected);
@@ -52,7 +52,7 @@ namespace MvcTurbine.NoRM.Tests.Mongo
                                   s.First().ShouldEqual(expected);
                               });
 
-            var repository = mocker.Resolve<MongoRepository>();
+            var repository = mocker.Resolve<Repository>();
             repository.Add(expected);
 
             mocker.GetMock<IMongoCollection<Sample>>()
@@ -64,7 +64,7 @@ namespace MvcTurbine.NoRM.Tests.Mongo
         {
             var expected = new Sample();
 
-            var repository = mocker.Resolve<MongoRepository>();
+            var repository = mocker.Resolve<Repository>();
             repository.Update(expected);
 
             mocker.GetMock<IMongoCollection<Sample>>()
@@ -76,7 +76,7 @@ namespace MvcTurbine.NoRM.Tests.Mongo
         {
             var expected = new Sample();
 
-            var repository = mocker.Resolve<MongoRepository>();
+            var repository = mocker.Resolve<Repository>();
             repository.Delete(expected);
 
             mocker.GetMock<IMongoCollection<Sample>>()

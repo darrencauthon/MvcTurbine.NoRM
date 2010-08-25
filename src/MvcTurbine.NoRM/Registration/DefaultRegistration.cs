@@ -8,9 +8,10 @@ namespace MvcTurbine.NoRM.Registration
         public void Register(IServiceLocator locator)
         {
             locator.Register<IMongoRepositoryFactory, MongoRepositoryFactory>();
-            locator.Register<IMongoRepository, MongoRepository>();
+            locator.Register<IRepository, Repository>();
             locator.Register<IMongoFactory, MongoFactory>();
             locator.Register<IMongoCollectionBuilder, MongoCollectionBuilder>();
+            locator.Register<IMongoConnectionSettingsRetriever, DefaultMongoConnectionSettingsRetriever>();
         }
     }
 }

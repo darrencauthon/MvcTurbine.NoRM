@@ -20,18 +20,18 @@ namespace SampleApplication.Controllers
     [HandleError]
     public class HomeController : Controller
     {
-        private readonly IMongoRepository mongoRepository;
+        private readonly IRepository repository;
 
-        public HomeController(IMongoRepository mongoRepository)
+        public HomeController(IRepository repository)
         {
-            this.mongoRepository = mongoRepository;
+            this.repository = repository;
         }
 
         public ActionResult Index()
         {
-            mongoRepository.Add(new WebsiteVisit());
+            repository.Add(new WebsiteVisit());
 
-            var hits = mongoRepository.Retrieve<WebsiteVisit>().Count();
+            var hits = repository.Retrieve<WebsiteVisit>().Count();
 
             var testMessage = "Hits: {0}";
 

@@ -5,14 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{05DDD5D4-3CDE-4908-93DF-A3427980BD63}</ProjectGuid>
+    <ProjectGuid>{67ABAC60-FE5B-4193-9E98-3EFF9B158498}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvcTurbine.NoRM</RootNamespace>
-    <AssemblyName>MvcTurbine.NoRM</AssemblyName>
+    <RootNamespace>MvcTurbine.NoRM.Tests</RootNamespace>
+    <AssemblyName>MvcTurbine.NoRM.Tests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,39 +31,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MvcTurbine, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0e426322531bc5b0, processorArchitecture=MSIL">
+    <Reference Include="AutoMoq">
+      <HintPath>..\..\lib\AutoMoq\AutoMoq.dll</HintPath>
+    </Reference>
+    <Reference Include="Norm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\lib\MvcTurbine\MvcTurbine.dll</HintPath>
-    </Reference>
-    <Reference Include="MvcTurbine.Web">
-      <HintPath>..\..\lib\MvcTurbine\MvcTurbine.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="Norm">
       <HintPath>..\..\lib\NoRM\Norm.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Should">
+      <HintPath>..\..\lib\Should\Should.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Db\DefaultMongoConnectionSettingsRetriever.cs" />
-    <Compile Include="Db\DefaultServerNameCalculator.cs" />
-    <Compile Include="Db\CurrentAssemblyNameRetriever.cs" />
-    <Compile Include="HttpHandlers\SessionHttpHandler.cs" />
-    <Compile Include="Mongo\IMongoConnectionSettingsRetriever.cs" />
-    <Compile Include="Mongo\IRepository.cs" />
-    <Compile Include="Mongo\MongoCollectionBuilder.cs" />
-    <Compile Include="Mongo\MongoConnectionSettings.cs" />
-    <Compile Include="Mongo\MongoFactory.cs" />
-    <Compile Include="Mongo\MongoRepository.cs" />
-    <Compile Include="Mongo\MongoRepositoryFactory.cs" />
+    <Compile Include="Db\DefaultServerNameCalculatorTests.cs" />
+    <Compile Include="Mongo\DefaultMongoConnectionSettingsRetrieverTests.cs" />
+    <Compile Include="Mongo\MongoCollectionBuilderTests.cs" />
+    <Compile Include="Mongo\MongoFactoryTests.cs" />
+    <Compile Include="Mongo\MongoRepositoryFactoryTests.cs" />
+    <Compile Include="Mongo\MongoRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration\DefaultRegistration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvcTurbine.NoRM\MvcTurbine.NoRM.csproj">
+      <Project>{05DDD5D4-3CDE-4908-93DF-A3427980BD63}</Project>
+      <Name>MvcTurbine.NoRM</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

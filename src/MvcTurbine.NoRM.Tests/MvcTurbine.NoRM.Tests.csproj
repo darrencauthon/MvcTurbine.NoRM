@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Db\DefaultServerNameCalculatorTests.cs" />
     <Compile Include="Mongo\DefaultMongoConnectionSettingsRetrieverTests.cs" />
     <Compile Include="Mongo\MongoCollectionBuilderTests.cs" />
     <Compile Include="Mongo\MongoFactoryTests.cs" />
